@@ -62,3 +62,20 @@ def ai_assistant(user_input):
 # تجربة الكود
 user_say = "pi"
 print("AI Response:", ai_assistant(user_say))
+# تعريف الدالة أولاً
+def ai_assistant(user_input):
+    # تحويل النص لمدخلات صغيرة لضمان التعرف على الكلمات
+    user_input = user_input.lower()
+    
+    responses = {
+        "hi": "Hello Bashar! How can I help you?",
+        "pi": "Pi Network is the first digital currency you can mine on your phone.",
+        "llama": "Llama 3.2 is running locally on your device!"
+    }
+    
+    # البحث عن الكلمة المفتاحية أو رد افتراضي في حال عدم وجودها
+    return responses.get(user_input, "I'm not sure how to respond to that.")
+
+# تجربة الكود
+user_say = "pi"
+print("AI Response:", ai_assistant(user_say))
