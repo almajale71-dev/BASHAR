@@ -46,3 +46,19 @@ def ai_assistant(user_input):
 # تجربة الكود
 user_say = "pi" 
 print("AI Response:", ai_assistant(user_say))
+def ai_assistant(user_input):
+    # تحويل النص لمدخلات صغيرة لضمان التعرف على الكلمات مهما كانت طريقة كتابتها
+    user_input = user_input.lower()
+    
+    responses = {
+        "hi": "Hello Bashar! How can I help you today?",
+        "pi": "Pi Network is the future of social cryptocurrency.",
+        "llama": "Llama 3.2 is running perfectly on your mobile device!"
+    }
+    
+    # الرد الافتراضي في حال كانت الكلمة غير موجودة
+    return responses.get(user_input, "I'm still learning about that! Try asking about Pi or Llama.")
+
+# تجربة الكود
+user_say = "pi"
+print("AI Response:", ai_assistant(user_say))
