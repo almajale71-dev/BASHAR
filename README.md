@@ -1,3 +1,21 @@
 # Bashar's AI Lab
 
-This repository is dedicated to experiments running AI models like Llama 3.2 and Gemma on mobile devices.
+This repository is dedicated to experiments running AI models like Llama # 🚀 قائمة أدوات الذكاء الاصطناعي المفضلة - بشار المجالي
+
+هذا الملف مخصص لتوثيق أفضل أدوات الذكاء الاصطناعي التي أستخدمها في تطوير مهاراتي التقنية ومتابعة مشاريع العملات الرقمية.
+
+## 📊 أدوات تحليل البيانات والعملات
+* **Arkham Intelligence:** لتتبع المعاملات على البلوكشين.
+* **Token Metrics:** لتحليل اتجاهات سوق الكريبتو.
+
+## 💻 أدوات المطورين (GitHub)
+* **GitHub Copilot:** المساعد الشخصي في كتابة الأكواد.
+* **Cursor AI:** محرر أكواد ذكي جداً.
+
+## 🎨 صناعة المحتوى والتصميم
+* **Midjourney:** لإنشاء صور احترافية بجودة عالية.
+* **Luma Dream Machine:** لتحويل الصور إلى فيديوهات.
+
+---
+*تم إنشاء هذا الملف ليكون مرجعاً تقنياً في عام 2026.*
+ and Gemma on mobile devices.
