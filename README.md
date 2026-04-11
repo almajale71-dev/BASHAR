@@ -32,3 +32,17 @@
 
 ---
 *تم إنشاء هذا الدليل لعام 2026 ليكون المرجع التقني الشامل لمشاريعي.*
+# كود تجريبي لاختبار الذكاء الاصطناعي - بشار المجالي
+def ai_assistant(user_input):
+    responses = {
+        "hi": "Hello Bashar! How can I help you today?",
+        "pi": "Pi Network is the future of social cryptocurrency.",
+        "llama": "Llama 3.2 is running perfectly on your mobile device!"
+    }
+    
+    # الرد بناءً على الكلمة المفتاحية أو رد افتراضي
+    return responses.get(user_input.lower(), "That's an interesting point! Tell me more.")
+
+# تجربة الكود
+user_say = "pi" 
+print("AI Response:", ai_assistant(user_say))
