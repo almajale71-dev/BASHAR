@@ -109,3 +109,28 @@ while True:
     result = ai_assistant(user_say)
     print("AI Response:", result)
     print("-" * 30)
+def ai_assistant(user_input, name):
+    user_input = user_input.lower()
+    
+    responses = {
+        "hi": f"Hello {name}! كيف يمكنني مساعدتك اليوم؟",
+        "pi": "Pi Network هي أول عملة رقمية يمكنك تعدينها من هاتفك.",
+        "llama": "Llama 3.2 يعمل الآن محلياً على جهازك!"
+    }
+    
+    return responses.get(user_input, "عذراً، لا أعرف هذه الكلمة بعد.")
+
+# الخطوة الجديدة: طلب الاسم قبل بدء الحلقة
+user_name = input("مرحباً! ما هو اسمك؟ ")
+print(f"أهلاً بك يا {user_name} في مساعدك الذكي.")
+print("--- (اكتب 'exit' للخروج) ---")
+
+while True:
+    user_say = input(f"\n[{user_name}]: اسأل عن شيء: ")
+    
+    if user_say.lower() == "exit":
+        print(f"وداعاً يا {user_name}! نراك لاحقاً.")
+        break
+        
+    result = ai_assistant(user_say, user_name)
+    print("AI Response:", result)
