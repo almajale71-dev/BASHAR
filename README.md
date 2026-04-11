@@ -1,4 +1,4 @@
-
+(َََََ
 # 🚀 مشروع بشار المجالي التقني | Bashar's Tech Lab
 
 أنا **بشار المجالي** من الأردن، أعمل كـ **Validator** (موثّق) و **Miner** (عدّان) في شبكة Pi. هذا المستودع هو معملي الخاص لتوثيق تجارب الذكاء الاصطناعي ومصادر العملات الرقمية.
@@ -130,6 +130,37 @@ while True:
     
     if user_say.lower() == "exit":
         print(f"وداعاً يا {user_name}! نراك لاحقاً.")
+        break
+        
+    result = ai_assistant(user_say, user_name)
+    print("AI Response:", result)
+def ai_assistant(user_input, name):
+    user_input = user_input.lower()
+    
+    # القاموس الذكي (إجابات مفصلة)
+    responses = {
+        "hi": f"أهلاً بك يا {name}! أنا مساعدك البرمجي، كيف أخدمك؟",
+        "pi": "عملة Pi Network هي مشروع عملة رقمية تهدف للتعدين عبر الهاتف المحمول.",
+        "llama": "Llama 3.2 هو نموذج ذكاء اصطناعي قوي جداً يمكن تشغيله محلياً.",
+        "code": "البرمجة هي لغة المستقبل، وأنت الآن تسير في الطريق الصحيح!"
+    }
+
+    # محرك البحث الجزئي (الذكاء في فهم الجملة)
+    for key in responses:
+        if key in user_input: # يبحث إذا كانت الكلمة موجودة داخل جملتك
+            return responses[key]
+            
+    return "هذه معلومة جديدة عليّ، سأحاول تعلمها يا " + name
+
+# واجهة المستخدم داخل تطبيقك
+user_name = input("ما اسمك؟ ")
+print(f"مرحباً {user_name}، أنا أسمعك الآن...")
+
+while True:
+    user_say = input(f"\n[{user_name}]: ")
+    
+    if user_say.lower() in ["exit", "خروج"]:
+        print(f"وداعاً يا {user_name}")
         break
         
     result = ai_assistant(user_say, user_name)
