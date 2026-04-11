@@ -79,3 +79,33 @@ def ai_assistant(user_input):
 # تجربة الكود
 user_say = "pi"
 print("AI Response:", ai_assistant(user_say))
+def ai_assistant(user_input):
+    # تحويل النص لمدخلات صغيرة لضمان التعرف على الكلمات
+    user_input = user_input.lower()
+    
+    # القاموس الذي يحتوي على الردود
+    responses = {
+        "hi": "Hello Bashar! How can I help you?",
+        "pi": "Pi Network is the first digital currency you can mine on your phone.",
+        "llama": "Llama 3.2 is running locally on your device!"
+    }
+    
+    # البحث عن الكلمة، وإذا لم توجد يعطي رداً افتراضياً
+    return responses.get(user_input, "عذراً، لا أملك إجابة لهذه الكلمة حالياً.")
+
+# حلقة تكرار (Loop) لجعل البرنامج يعمل باستمرار
+print("--- مرحباً بك في مساعدك البرمجي (اكتب 'exit' للخروج) ---")
+
+while True:
+    # طلب المدخلات من المستخدم حياً
+    user_say = input("اسألني عن شيء (hi, pi, llama): ")
+    
+    # شرط للخروج من البرنامج
+    if user_say.lower() == "exit":
+        print("وداعاً! أتمنى لك يوماً سعيداً.")
+        break
+        
+    # استدعاء الدالة وطباعة النتيجة
+    result = ai_assistant(user_say)
+    print("AI Response:", result)
+    print("-" * 30)
