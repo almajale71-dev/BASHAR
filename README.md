@@ -165,3 +165,23 @@ while True:
         
     result = ai_assistant(user_say, user_name)
     print("AI Response:", result)
+# Bashar's Tech Lab - AI Assistant Logic v1.0
+# هذا الكود يمثل منطق بسيط لمساعد ذكي يرحب بالمستخدم ويعالج مدخلاته
+
+def ai_assistant():
+    print("--- مرحبًا بك في مختبر بشار التقني ---")
+    user_name = "بشار"
+    
+    status = input(f"مرحباً {user_name}، كيف يمكنني مساعدتك في تجاربك اليوم؟ (AI / Crypto / Exit): ").lower()
+
+    if status == "ai":
+        print("جاهز لتشغيل نماذج LLMs.. هل تريد تجربة Llama 3.2؟")
+    elif status == "crypto":
+        print("جاري فحص حالة شبكة Pi والبلوكشين...")
+    elif status == "exit":
+        print("وداعاً! بالتوفيق في مشاريعك.")
+    else:
+        print("خيار غير معروف، لكنني هنا لدعم تجاربك دائماً.")
+
+if __name__ == "__main__":
+    ai_assistant()
