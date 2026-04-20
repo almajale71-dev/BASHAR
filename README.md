@@ -185,3 +185,34 @@ def ai_assistant():
 
 if __name__ == "__main__":
     ai_assistant()
+# Bashar's Tech Lab - Task Manager v1.1
+import datetime
+
+def lab_dashboard():
+    print("="*30)
+    print(" مرحباً بك في لوحة تحكم مختبر بشار ")
+    print("="*30)
+    
+    # تعريف المهام الحالية في المختبر
+    tasks = {
+        "1": "تطوير منطق المساعد الذكي (AI)",
+        "2": "متابعة توثيق شبكة Pi (Blockchain)",
+        "3": "تحديث مستودع GitHub"
+    }
+
+    print("\nالمهام الحالية في المختبر:")
+    for key, value in tasks.items():
+        print(f"{key}. {value}")
+
+    choice = input("\nاختر رقم المهمة التي تريد العمل عليها (أو q للخروج): ")
+
+    if choice in tasks:
+        print(f"\n[!] جاري البدء في: {tasks[choice]}")
+        print(f"وقت البدء: {datetime.datetime.now().strftime('%Y-%m-%d %H:%M')}")
+    elif choice.lower() == 'q':
+        print("إغلاق المختبر.. بالتوفيق يا بشار!")
+    else:
+        print("خيار غير موجود، يرجى اختيار رقم من القائمة.")
+
+if __name__ == "__main__":
+    lab_dashboard()
